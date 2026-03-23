@@ -1,8 +1,8 @@
 import java.util.*;
-class ListNode{
+class Node{
     int data;
-    ListNode next;
-    ListNode(int data){
+    Node next;
+    Node(int data){
         this.data=data;
     }
 }
@@ -11,11 +11,11 @@ public static void main(String[] args)
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
 
-        ListNode head=null;
-        ListNode tail=null;
+        Node head=null;
+        Node tail=null;
         for(int i=0;i<n;i++){
             int data=sc.nextInt();
-            ListNode nnode=new ListNode(data);
+            Node nnode=new Node(data);
             if(head==null){
                 head=nnode;
                 tail=nnode;
@@ -26,7 +26,7 @@ public static void main(String[] args)
             }
         }
         head=reverse(head);
-        ListNode temp=head;
+            Node temp=head;
         while(temp!=null)
             {
             System.out.print(temp.data+" ");
